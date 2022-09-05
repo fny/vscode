@@ -13,14 +13,17 @@ function generateViewMoreElement(outputId: string) {
 	second.textContent = 'size limit';
 	second.href = `command:workbench.action.openSettings?%5B%22notebook.output.textLineLimit%22%5D`;
 	const third = document.createElement('span');
-	third.textContent = '. Open the full output data';
-	const forth = document.createElement('a');
-	forth.textContent = ' in a text editor';
-	forth.href = `command:workbench.action.openLargeOutput?${outputId}`;
+	third.textContent = '. Open the full output data ';
+	const fourth = document.createElement('a');
+	fourth.textContent = 'in a text editor';
+	fourth.href = `command:workbench.action.openLargeOutput?${outputId}`;
+	const fifth = document.createElement('span');
+	fifth.textContent = '.';
 	container.appendChild(first);
 	container.appendChild(second);
 	container.appendChild(third);
-	container.appendChild(forth);
+	container.appendChild(fourth);
+	container.appendChild(fifth);
 	return container;
 }
 
